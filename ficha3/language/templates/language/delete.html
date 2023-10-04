@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="R. Almeida" />
+    <title>Apagar Linguagem</title>
+  </head>
+  <body>
+    <h1>Apagar Linguagem</h1>
+
+    <p>
+      <a href="/language/">Voltar</a>
+    </p>
+
+    <form action="/language/delete/" method="post">
+      {% csrf_token %}
+
+      <label for="id">ID</label>
+      <input type="number" id="id" name="id" placeholder="e.g. 1" />
+
+      <button type="submit">Apagar</button>
+    </form>
+  </body>
+</html>

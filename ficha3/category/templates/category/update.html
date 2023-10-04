@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="R. Almeida" />
+    <title>Atualizar Categoria</title>
+  </head>
+  <body>
+    <h1>Atualizar Categoria</h1>
+
+    <p>
+      <a href="/category/">Voltar</a>
+    </p>
+
+    <form action="/category/update/" method="post">
+      {% csrf_token %}
+
+      <label for="id">Insira o ID da categoria que quer atualizar:</label>
+      <input type="number" name="id" id="id" />
+
+      <button type="submit">Editar</button>
+    </form>
+  </body>
+</html>

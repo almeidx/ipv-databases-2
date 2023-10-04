@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="R. Almeida" />
+    <title>Atualizar Linguagem</title>
+  </head>
+  <body>
+    <h1>Atualizar Linguagem</h1>
+
+    <p>
+      <a href="/language/"> Voltar </a>
+    </p>
+
+    <form action="/language/update/" method="post">
+      {% csrf_token %}
+
+      <label for="id">Insira o ID da linguagem que quer atualizar:</label>
+      <input type="number" name="id" id="id" />
+
+      <button type="submit">Editar</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="R. Almeida" />
+    <title>Criar Linguagem</title>
+  </head>
+  <body>
+    <h1>Criar linguagem</h1>
+
+    <p>
+      <a href="/language/">Voltar</a>
+    </p>
+
+    <form action="/language/create/" method="post">
+      {% csrf_token %}
+
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" placeholder="e.g. Português" />
+
+      <button type="submit">Criar</button>
+    </form>
+  </body>
+</html>

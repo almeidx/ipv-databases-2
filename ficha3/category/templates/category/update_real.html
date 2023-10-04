@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="R. Almeida" />
+    <title>Atualizar Categoria</title>
+  </head>
+  <body>
+    <h1>Atualizar Categoria</h1>
+
+    <p>
+      <a href="/category/">Voltar</a>
+    </p>
+
+    <form action="/category/update/{{ row.0 }}" method="post">
+      {% csrf_token %}
+
+      <p>ID: {{ row.0 }}</p>
+
+      <label for="name">Nome</label>
+      <input type="text" name="name" id="name" value="{{ row.1 }}" />
+
+      <button type="submit">Editar</button>
+    </form>
+  </body>
+</html>

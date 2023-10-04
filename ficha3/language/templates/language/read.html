@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="R. Almeida" />
+    <title>Listar Linguagens</title>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Linguagens</h1>
+
+    <p>
+      <a href="/language/">Voltar</a>
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="min-width: 3rem">ID</th>
+          <th style="min-width: 6rem">Nome</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{ row.0 }}</td>
+          <td>{{ row.1 }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

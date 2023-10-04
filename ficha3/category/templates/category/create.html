@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="R. Almeida" />
+    <title>Criar Categoria</title>
+  </head>
+  <body>
+    <h1>Criar categoria</h1>
+
+    <p>
+      <a href="/category/">Voltar</a>
+    </p>
+
+    <form action="/category/create/" method="post">
+      {% csrf_token %}
+
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" placeholder="e.g. Thriller" />
+
+      <button type="submit">Criar</button>
+    </form>
+  </body>
+</html>
