@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="R. Almeida" />
+
+    <title>Objetos</title>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Objetos</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Designação</th>
+          <th>Atributos</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for document in documents %}
+        <tr>
+          <td>{{ document.designacao }}</td>
+          <td>
+            {% for key, value in document.items %}
+              {% if key != '_id' and key != 'designacao' %}
+                {{ key }}: {{ value }}
+              {% endif %}
+            {% endfor %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <br />
+
+    <a href="/">Voltar</a>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="R. Almeida" />
+
+    <title>Criar Objeto</title>
+  </head>
+  <body>
+    <h1>Criar Objeto</h1>
+
+    <form action="/create/" method="post">
+      {% csrf_token %}
+
+      <label for="designacao">Designação</label>
+      <input type="text" id="designacao" name="designacao" />
+
+      <br />
+      <br />
+
+      <label for="key">Valores dinâmicos (opcional):</label>
+      <br />
+      <input type="text" name="key" id="key" placeholder="Atributo" />:
+      <input type="text" name="value" placeholder="Valor" />
+
+      <br />
+      <br />
+
+      <button type="submit">Criar</button>
+    </form>
+
+    <br />
+
+    <a href="/">Voltar</a>
+  </body>
+</html>
