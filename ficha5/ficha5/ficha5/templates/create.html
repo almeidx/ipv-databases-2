@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="R. Almeida" />
+
+    <title>Criar Objeto</title>
+  </head>
+  <body>
+    <h1>Criar Objeto</h1>
+
+    <form action="/create/" method="post">
+      {% csrf_token %}
+
+      <label for="designacao">Designação</label>
+      <input type="text" id="designacao" name="designacao" />
+
+      <br />
+      <br />
+
+      <label for="key">Valores dinâmicos (opcional): (valores em branco não serão incluídos)</label>
+      <br />
+      <div style="display: flex">
+        <input type="text" name="key" id="key" placeholder="Atributo" style="height: fit-content" />:
+        <div
+          id="values-container"
+          style="display: flex; flex-direction: column; gap: 4px"
+        >
+          <input type="text" name="value" placeholder="Valor" />
+        </div>
+        <button
+          onclick="
+            const container = document.getElementById('values-container');
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.name = 'value';
+            input.placeholder = 'Valor';
+            container.appendChild(input);
+          "
+					style="margin-left: 4px; height: fit-content"
+          type="button"
+        >
+          Adicionar mais
+        </button>
+      </div>
+
+      <br />
+      <br />
+
+      <button type="submit">Criar</button>
+    </form>
+
+    <br />
+
+    <a href="/">Voltar</a>
+  </body>
+</html>
